@@ -8,13 +8,15 @@ class RemoteCharactersState extends Equatable {
   final List<CharacterEntity> characters;
   final bool hasMaxReached;
 
-  const RemoteCharactersState({
-      this.status = RemoteCharactersStatus.loading,
+  const RemoteCharactersState(
+      {this.status = RemoteCharactersStatus.loading,
       this.characters = const <CharacterEntity>[],
       this.hasMaxReached = false});
 
   RemoteCharactersState copyWith(
-      {RemoteCharactersStatus? pStatus, List<CharacterEntity>? pCharacters, bool? pHasMaxReached}) {
+      {RemoteCharactersStatus? pStatus,
+      List<CharacterEntity>? pCharacters,
+      bool? pHasMaxReached}) {
     return RemoteCharactersState(
         status: pStatus ?? status,
         characters: pCharacters ?? characters,

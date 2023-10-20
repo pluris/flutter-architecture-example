@@ -30,7 +30,7 @@ class Info with _$Info {
 @freezed
 @Entity(tableName: 'character', primaryKeys: ['id'])
 abstract class CharacterEntity with _$CharacterEntity {
-    const factory CharacterEntity({
+  const factory CharacterEntity({
     int? id,
     String? name,
     String? status,
@@ -45,8 +45,7 @@ abstract class CharacterEntity with _$CharacterEntity {
 
   factory CharacterEntity.fromJson(Map<String, dynamic> map) =>
       _$CharacterEntityFromJson(map);
-    factory CharacterEntity.fromEntity(CharacterEntity entity) =>
-      CharacterEntity(
+  factory CharacterEntity.fromEntity(CharacterEntity entity) => CharacterEntity(
         id: entity.id,
         name: entity.name,
         status: entity.status,
