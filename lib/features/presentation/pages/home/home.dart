@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_architecture_example/config/constants/constants.dart';
 import 'package:flutter_architecture_example/features/domain/entity/character_entity.dart';
 import 'package:flutter_architecture_example/features/presentation/bloc/character/remote/remote_character_bloc.dart';
 import 'package:flutter_architecture_example/features/presentation/bloc/character/remote/remote_character_event.dart';
@@ -90,9 +91,8 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _onCharacterPressed(BuildContext context, CharacterEntity Character) {
-    //TODO: move characterDetailsScreen
-    //Navigator.pushNamed(context, characterDetailsScreen, arguments: character);
+  void _onCharacterPressed(BuildContext context, CharacterEntity character) {
+    Navigator.pushNamed(context, characterDetailsScreen, arguments: character);
   }
 
   @override
