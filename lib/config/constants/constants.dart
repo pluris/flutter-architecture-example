@@ -1,4 +1,6 @@
 // Screens
+// ignore_for_file: constant_identifier_names
+
 const String charactersListScreen = '/';
 const String characterDetailsScreen = '/character_details';
 
